@@ -46,6 +46,22 @@ The fastest way to get a live preview URL:
 
 Once connected, **every push to any branch automatically gets its own preview URL** — Vercel posts the link directly in the GitHub PR.
 
+## GitHub Pages Preview (automatic — no login required)
+
+A GitHub Actions workflow automatically builds and publishes the site to GitHub Pages on every push.
+
+**One-time setup (30 seconds):**
+
+1. Go to the repo on GitHub → **Settings** → **Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Branch: `gh-pages` / folder: `/ (root)` → **Save**
+
+**Your live preview URL will be:**
+
+> **https://sopmaker.github.io/getadmissionabroad/**
+
+The workflow triggers on every push — the URL updates within ~2 minutes. The booking form's submit button won't work in this preview (it's a static export, no server), but all pages and UI are fully visible.
+
 ## Local Development
 
 ```bash
