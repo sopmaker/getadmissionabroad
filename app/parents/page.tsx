@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Do you guarantee admission?",
-    a: "No. Anyone who guarantees admission is misleading you. What we guarantee is a honest, thorough, professionally executed application — one that gives your child the best realistic chance.",
+    a: "No. Anyone who guarantees admission is misleading you. What we guarantee is an honest, thorough, professionally executed application — one that gives your child the best realistic chance.",
   },
 ];
 

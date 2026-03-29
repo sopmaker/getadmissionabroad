@@ -6,7 +6,6 @@ function generateSlots() {
   const slots: string[] = [];
   for (let h = 10; h <= 20; h++) {
     ["00", "30"].forEach((m) => {
-      if (h === 20 && m === "30") return;
       const hour12 = h > 12 ? h - 12 : h;
       const ampm = h >= 12 ? "PM" : "AM";
       slots.push(`${String(hour12).padStart(2, "0")}:${m} ${ampm}`);
