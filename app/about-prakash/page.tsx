@@ -30,46 +30,77 @@ export default function AboutPrakashPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="bg-[#1a2744] text-white py-16">
+      <section className="bg-[#1a2744] text-white py-20">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
+              <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-4">Founder & Lead Consultant</p>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                About{" "}
-                <span className="text-[#c9a84c]">Prakash</span>
-                <br />
-                <span className="text-2xl font-normal text-gray-300">Founder, Get Admission Abroad</span>
+                Meet Prakash
               </h1>
-              <p className="mt-6 text-gray-300 leading-relaxed">
-                Prakash founded Get Admission Abroad with a clear principle: every student deserves honest, personalised guidance — not a production-line consultancy where they're handed off to a junior and never speak to a senior advisor again.
+              <div className="mt-3 h-1 w-12 bg-[#c9a84c] rounded-full mb-6" />
+              <p className="text-gray-300 leading-relaxed">
+                Prakash founded Get Admission Abroad with a clear principle: every student deserves honest, personalised guidance — not a production-line consultancy where they&apos;re handed off to a junior and never speak to a senior advisor again.
               </p>
               <p className="mt-4 text-gray-300 leading-relaxed">
                 Based in Delhi, he works directly with students and families across India who are targeting universities in the US, UK, Canada, Australia, and UAE. From the first profile call to the last application submission, Prakash is personally involved at every step.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
+
+              {/* Credential highlights */}
+              <div className="mt-8 grid grid-cols-2 gap-3">
+                {[
+                  { number: "8+", label: "Years' Experience" },
+                  { number: "500+", label: "Students Guided" },
+                  { number: "5", label: "Countries Covered" },
+                  { number: "5.0★", label: "Google Rating" },
+                ].map((c) => (
+                  <div key={c.label} className="bg-white/8 border border-white/10 rounded-2xl px-5 py-4">
+                    <p className="text-2xl font-bold text-[#c9a84c]">{c.number}</p>
+                    <p className="text-xs text-gray-400 mt-1">{c.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="https://www.instagram.com/sopwriterprakash/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-2 bg-white/10 border border-white/30 text-white text-sm font-semibold rounded-lg hover:bg-white/20 transition-colors"
+                  className="px-5 py-2.5 bg-white/10 border border-white/30 text-white text-sm font-semibold rounded-xl hover:bg-white/20 transition-colors"
                 >
                   📷 @sopwriterprakash
                 </a>
-                <Link href="/book" className="px-5 py-2 bg-[#c9a84c] text-white text-sm font-semibold rounded-lg hover:bg-[#b8973b] transition-colors">
+                <Link href="/book" className="px-5 py-2.5 btn-gold-shimmer text-white text-sm font-bold rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   Book a Call
                 </Link>
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-80 h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg"
-                  alt="Prakash — Founder, Get Admission Abroad"
-                  fill
-                  className="object-cover"
-                  priority
-                  unoptimized
-                />
+              <div className="relative">
+                <div className="relative w-72 h-[420px] md:w-80 md:h-[460px] rounded-3xl overflow-hidden shadow-2xl ring-2 ring-[#c9a84c]/30">
+                  <Image
+                    src="https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg"
+                    alt="Prakash — Founder, Get Admission Abroad"
+                    fill
+                    className="object-cover"
+                    priority
+                    unoptimized
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0e1829]/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-white font-bold text-sm">Prakash</p>
+                    <p className="text-[#c9a84c] text-xs font-medium">Founder · Get Admission Abroad, Delhi</p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">🏆</span>
+                    <div>
+                      <p className="text-xs font-bold text-[#1a2744]">100% Founder-Led</p>
+                      <p className="text-xs text-gray-500">No juniors, ever</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -77,11 +108,13 @@ export default function AboutPrakashPage() {
       </section>
 
       {/* Origin Story */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#1a2744] mb-6">Why I Started This Practice</h2>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
+            <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-2">In His Own Words</p>
+            <h2 className="text-3xl font-bold text-[#1a2744] mb-2">Why I Started This Practice</h2>
+            <div className="h-1 w-10 bg-[#c9a84c] rounded-full mb-8" />
+            <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
                 The study abroad consulting industry in India has a problem: most large consultancies operate like factories. Students pay significant fees, fill out forms, and are assigned to junior counsellors who follow a template. The founder is never involved. The guidance is generic. And outcomes vary wildly.
               </p>
@@ -97,12 +130,14 @@ export default function AboutPrakashPage() {
       </section>
 
       {/* My Standards */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2744] mb-6">My Standards</h2>
-              <ul className="space-y-4">
+              <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-2">My Commitments</p>
+              <h2 className="text-3xl font-bold text-[#1a2744] mb-2">My Standards</h2>
+              <div className="h-1 w-10 bg-[#c9a84c] rounded-full mb-8" />
+              <ul className="space-y-5">
                 {[
                   {
                     title: "Honesty before optimism",
@@ -121,11 +156,15 @@ export default function AboutPrakashPage() {
                     desc: "No ticketing systems, no response windows. If something urgent comes up, you can reach me — and I'll respond.",
                   },
                 ].map((standard) => (
-                  <li key={standard.title} className="flex gap-3">
-                    <span className="text-[#c9a84c] font-bold mt-0.5">→</span>
+                  <li key={standard.title} className="flex gap-4 p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                    <span className="mt-0.5 w-7 h-7 rounded-xl bg-[#c9a84c]/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3.5 h-3.5 text-[#c9a84c]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
                     <div>
-                      <span className="font-semibold text-[#1a2744]">{standard.title}:</span>{" "}
-                      <span className="text-gray-600 text-sm">{standard.desc}</span>
+                      <p className="font-semibold text-[#1a2744] text-sm">{standard.title}</p>
+                      <p className="text-gray-500 text-sm mt-1 leading-relaxed">{standard.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -133,7 +172,9 @@ export default function AboutPrakashPage() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2744] mb-6">My Process</h2>
+              <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-2">How We Work</p>
+              <h2 className="text-3xl font-bold text-[#1a2744] mb-2">My Process</h2>
+              <div className="h-1 w-10 bg-[#c9a84c] rounded-full mb-8" />
               <ol className="space-y-5">
                 {[
                   { step: 1, title: "Free Discovery Call", desc: "15 minutes. You explain your situation. I give you my honest initial read." },
@@ -142,13 +183,13 @@ export default function AboutPrakashPage() {
                   { step: 4, title: "Execution", desc: "We build the application together — essays, documents, portal submissions." },
                   { step: 5, title: "Decision Support", desc: "When offers come in, I help you evaluate and decide with clarity." },
                 ].map((step) => (
-                  <li key={step.step} className="flex gap-4">
-                    <div className="w-8 h-8 bg-[#1a2744] text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                  <li key={step.step} className="flex gap-4 p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                    <div className="w-8 h-8 bg-[#1a2744] text-white rounded-xl flex items-center justify-center flex-shrink-0 text-sm font-bold">
                       {step.step}
                     </div>
                     <div>
-                      <span className="font-semibold text-[#1a2744]">{step.title}:</span>{" "}
-                      <span className="text-gray-600 text-sm">{step.desc}</span>
+                      <p className="font-semibold text-[#1a2744] text-sm">{step.title}</p>
+                      <p className="text-gray-500 text-sm mt-1 leading-relaxed">{step.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -159,24 +200,32 @@ export default function AboutPrakashPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#1a2744] text-white text-center">
-        <Container>
-          <h2 className="text-3xl font-bold">Let&apos;s Talk</h2>
-          <p className="mt-3 text-gray-300 max-w-lg mx-auto">
-            Book a free 15-minute call and decide for yourself if this is the right fit.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/book" className="px-8 py-3 bg-[#c9a84c] text-white font-bold rounded-lg hover:bg-[#b8973b] transition-colors">
-              Book a Free Call
-            </Link>
-            <a
-              href="https://www.instagram.com/sopwriterprakash/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
-            >
-              Follow on Instagram
-            </a>
+      <section className="py-20 bg-[#111c36] text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#c9a84c]/5 rounded-full blur-3xl" />
+        </div>
+        <Container className="relative">
+          <div className="max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a84c]/15 border border-[#c9a84c]/30 rounded-full mb-6">
+              <span className="text-[#c9a84c] text-xs font-semibold tracking-wide uppercase">Free · No Obligation · 15 Minutes</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold">Let&apos;s Talk</h2>
+            <p className="mt-4 text-gray-300 max-w-lg mx-auto leading-relaxed">
+              Book a free 15-minute call and decide for yourself if this is the right fit. No hard sell, no commitment.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link href="/book" className="px-8 py-3.5 btn-gold-shimmer text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                Book a Free Call
+              </Link>
+              <a
+                href="https://www.instagram.com/sopwriterprakash/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 transition-colors"
+              >
+                Follow on Instagram
+              </a>
+            </div>
           </div>
         </Container>
       </section>

@@ -151,21 +151,106 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── Note from Prakash ─────────────────────────────────── */}
-      <section className="py-16 bg-amber-50">
+      {/* ── University Names Belt ──────────────────────────────── */}
+      <section className="py-8 bg-gray-50 border-b border-gray-100">
         <Container>
-          <div className="max-w-3xl mx-auto">
-            <div className="relative bg-white rounded-2xl shadow-sm border border-amber-100 p-8 md:p-10">
-              <div className="absolute top-6 left-6 text-6xl text-[#c9a84c]/20 font-serif leading-none select-none">&ldquo;</div>
-              <p className="text-lg text-gray-700 leading-relaxed relative z-10">
-                Hi, I&apos;m Prakash. Get Admission Abroad is a founder-led practice — not a call-centre consultancy. I personally guide every student and family through the entire admissions journey: from profile evaluation and university shortlisting to application strategy and documentation. Whether you&apos;re planning 18 months ahead or facing a deadline in weeks, you&apos;ll always know exactly what we&apos;re doing and why.
-              </p>
-              <div className="mt-6 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#1a2744] flex items-center justify-center text-white font-bold text-sm">P</div>
-                <div>
-                  <p className="font-bold text-[#1a2744]">Prakash</p>
-                  <p className="text-sm text-gray-500">Founder · Get Admission Abroad, Delhi</p>
+          <p className="text-xs font-semibold text-center text-gray-400 uppercase tracking-widest mb-5">
+            Universities Our Students Target
+          </p>
+          <div className="flex flex-wrap justify-center gap-2.5">
+            {[
+              "Harvard", "MIT", "Stanford", "Columbia", "Oxford",
+              "Cambridge", "LSE", "Imperial College", "University of Toronto",
+              "UBC", "McGill", "NYU", "UNSW Sydney", "Melbourne", "NYU Abu Dhabi",
+            ].map((uni) => (
+              <span
+                key={uni}
+                className="px-4 py-1.5 bg-white border border-gray-200 text-gray-600 text-sm font-medium rounded-full shadow-sm hover:border-[#c9a84c] hover:text-[#1a2744] transition-colors"
+              >
+                {uni}
+              </span>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── Meet Prakash ──────────────────────────────────────── */}
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            {/* Photo */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative">
+                <div className="relative w-72 h-[400px] md:w-80 md:h-[440px] rounded-3xl overflow-hidden shadow-2xl ring-2 ring-[#c9a84c]/20">
+                  <Image
+                    src="https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg"
+                    alt="Prakash — Founder, Get Admission Abroad"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0e1829]/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-white font-bold text-sm">Prakash</p>
+                    <p className="text-[#c9a84c] text-xs font-medium">Founder · Get Admission Abroad</p>
+                  </div>
                 </div>
+                {/* Floating credential badges */}
+                <div className="absolute -top-4 -right-4 bg-[#c9a84c] rounded-2xl shadow-lg px-4 py-3 text-white text-center">
+                  <p className="text-2xl font-bold leading-none">8+</p>
+                  <p className="text-xs font-medium mt-0.5">Years&apos; Experience</p>
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100 text-center">
+                  <p className="text-2xl font-bold text-[#1a2744] leading-none">500+</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Students Guided</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div>
+              <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-3">Your Consultant</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1a2744] leading-tight">
+                Meet Prakash
+              </h2>
+              <div className="mt-3 h-1 w-12 bg-[#c9a84c] rounded-full" />
+              <p className="mt-6 text-gray-600 leading-relaxed">
+                Hi, I&apos;m Prakash — the founder of Get Admission Abroad. I built this practice on a single belief: every student deserves honest, personalised guidance from someone who&apos;s genuinely invested in their outcome.
+              </p>
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                Unlike large consultancies where you meet a senior and then get passed to a junior, here you work directly with me — at every step. From your first profile call to your final submission, you&apos;ll always know exactly what we&apos;re doing and why.
+              </p>
+              <ul className="mt-7 space-y-3">
+                {[
+                  "8+ years guiding students across India",
+                  "500+ students helped to universities in US, UK, Canada, Australia & UAE",
+                  "STEM, Humanities, MBA, Public Policy, Law, Public Health & more",
+                  "Direct WhatsApp access — no ticketing systems, no intermediaries",
+                  "No templates. Every SOP and strategy built from scratch",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="mt-1 w-5 h-5 rounded-full bg-[#c9a84c]/15 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-[#c9a84c]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Link
+                  href="/book"
+                  className="inline-flex items-center gap-2 px-6 py-3 btn-gold-shimmer text-white font-bold rounded-xl shadow-sm hover:shadow-md transition-shadow text-sm"
+                >
+                  Book a Free Call with Prakash
+                </Link>
+                <Link
+                  href="/about-prakash"
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#1a2744] text-[#1a2744] font-semibold rounded-xl hover:bg-[#1a2744] hover:text-white transition-colors text-sm"
+                >
+                  Full Bio →
+                </Link>
               </div>
             </div>
           </div>
