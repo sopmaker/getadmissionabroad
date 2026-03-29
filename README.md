@@ -11,7 +11,7 @@ Built with **Next.js 16 App Router + TypeScript + Tailwind CSS**.
 - **Styling**: Tailwind CSS (navy #1a2744 + gold #c9a84c)
 - **Database**: SQLite via Prisma 7 + `@libsql/client` adapter
 - **Email**: Nodemailer (SMTP, optional)
-- **Font**: System font stack (Arial/Helvetica/sans-serif)
+- **Font**: Inter (Google Fonts)
 
 ## Pages
 
@@ -27,24 +27,34 @@ Built with **Next.js 16 App Router + TypeScript + Tailwind CSS**.
 | `/book` | Booking calendar with date/slot picker |
 | `/api/book` | POST endpoint for booking submissions |
 
-## Getting Started
+## Deploy to Vercel (get a live preview link)
+
+The fastest way to get a live preview URL:
+
+1. Go to **[vercel.com](https://vercel.com)** → **Add New Project**
+2. Import the **`sopmaker/getadmissionabroad`** GitHub repository
+3. Vercel will auto-detect Next.js — click **Deploy**
+4. Add these environment variables in the Vercel dashboard → Settings → Environment Variables:
+
+| Variable | Value |
+|---|---|
+| `DATABASE_URL` | For production use a hosted DB like [Turso](https://turso.tech) (`libsql://your-db.turso.io?authToken=token`). For a quick preview you can use `file:./dev.db` (note: ephemeral on Vercel) |
+| `OWNER_EMAIL` | `getadmissionabroad.in@gmail.com` |
+| `SMTP_HOST` | *(optional)* |
+| `SMTP_USER` | *(optional)* |
+| `SMTP_PASS` | *(optional)* |
+
+Once connected, **every push to any branch automatically gets its own preview URL** — Vercel posts the link directly in the GitHub PR.
+
+## Local Development
 
 ```bash
-npm install
-cp .env.example .env    # configure DATABASE_URL and SMTP vars
-npx prisma db push
-npm run dev
+npm install          # also runs `prisma generate` via postinstall
+cp .env.example .env # fill in DATABASE_URL (default SQLite works out of the box)
+npx prisma db push   # create the SQLite database tables
+npm run dev          # http://localhost:3000
 ```
 
 ## Environment Variables
 
-```
-DATABASE_URL="file:./prisma/dev.db"
-SMTP_HOST=""
-SMTP_PORT="587"
-SMTP_USER=""
-SMTP_PASS=""
-OWNER_EMAIL="getadmissionabroad.in@gmail.com"
-```
-
-SMTP variables are optional — bookings are saved to SQLite even if email is not configured.
+See `.env.example` for a full list. SMTP variables are optional — bookings are saved to the database even without email configured.
