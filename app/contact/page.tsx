@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <span className="text-3xl">💬</span>
                   <div>
                     <div className="font-semibold text-gray-800 group-hover:text-green-700">WhatsApp</div>
-                    <div className="text-sm text-gray-600">+91 8447385389</div>
+                    <div className="text-sm text-gray-600">Message Prakash directly</div>
                   </div>
                 </a>
 

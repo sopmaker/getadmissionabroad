@@ -69,7 +69,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
-              Founder-led study abroad consulting based in Delhi. Prakash personally guides every student — no juniors, no templates.
+              Founder-led study abroad consulting based in Delhi. Prakash personally guides every student, with no templates and complete transparency.
             </p>
             <div className="mt-5 space-y-2.5 text-sm text-gray-400">
               <a
@@ -79,7 +79,7 @@ export default function Footer() {
                 className="flex items-center gap-2.5 hover:text-[#c9a84c] transition-colors"
               >
                 <span className="w-8 h-8 rounded-lg bg-[#25d366]/10 flex items-center justify-center text-base flex-shrink-0">💬</span>
-                +91 8447385389
+                WhatsApp Prakash
               </a>
               <a
                 href={INSTAGRAM}
@@ -163,7 +163,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
           <p>© {year} Get Admission Abroad. Delhi, India. All rights reserved.</p>
-          <p>Founder-led · No templates · No juniors</p>
+          <p>Founder-led · No templates</p>
         </div>
       </div>
     </footer>

@@ -35,7 +35,7 @@ export default function ServicesPage() {
       <section className="bg-[#1a2744] text-white py-16">
         <Container>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
-            Study Abroad Services —{" "}
+            Study Abroad Services,{" "}
             <span className="text-[#c9a84c]">Profile to Admits</span>
           </h1>
           <p className="mt-4 text-lg text-gray-300 max-w-2xl">
@@ -178,7 +178,7 @@ export default function ServicesPage() {
               { step: "04", title: "Submit &amp; Decide", desc: "All materials submitted before deadlines. Post-admit guidance to pick the right offer." },
             ].map((s) => (
               <div key={s.step} className="text-center">
-                <div className="w-12 h-12 bg-[#1a2744] text-white rounded-full flex items-center justify-center mx-auto font-bold text-lg">
+                <div className="w-12 h-12 bg-[#1a2744] rounded-full flex items-center justify-center mx-auto font-bold text-lg" style={{ color: '#ffffff' }}>
                   {s.step}
                 </div>
                 <h3 className="mt-3 font-bold text-[#1a2744]" dangerouslySetInnerHTML={{ __html: s.title }} />

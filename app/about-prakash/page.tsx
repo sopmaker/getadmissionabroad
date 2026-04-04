@@ -87,17 +87,16 @@ export default function AboutPrakashPage() {
                     unoptimized
                   />
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0e1829]/80 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute bottom-2 left-4 right-4">
                     <p className="text-white font-bold text-sm">Prakash</p>
                     <p className="text-[#c9a84c] text-xs font-medium">Founder · Get Admission Abroad, Delhi</p>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100">
+                <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl px-4 py-2 border border-gray-100">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">🏆</span>
+                    <span className="text-xl">🏆</span>
                     <div>
                       <p className="text-xs font-bold text-[#1a2744]">100% Founder-Led</p>
-                      <p className="text-xs text-gray-500">No juniors, ever</p>
                     </div>
                   </div>
                 </div>

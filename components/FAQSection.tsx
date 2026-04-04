@@ -24,8 +24,8 @@ const faqs = [
     a: "Prakash is Delhi-based but works with students from all over India — and sometimes internationally. All consultations and review sessions can happen remotely over video call, WhatsApp, or email.",
   },
   {
-    q: "What subjects and programs do you cover?",
-    a: "From engineering and CS to humanities, public policy, medicine, business, and the arts. Prakash has helped students apply to STEM programs, MBAs, MiM, MPP, LLM, public health, and fine arts programs — at universities ranging from Ivy League to strong program-fit schools.",
+    q: "What countries and programs do you cover?",
+    a: "We cover all major study destinations — the US, UK, Canada, Australia, UAE, Ireland, Singapore, Germany, the Netherlands, and more. If you have a target country in mind, we can help regardless of where it is. For programs, we cover everything from engineering, CS, and STEM to humanities, public policy, medicine, MBA, MiM, MPP, LLM, public health, fine arts, and beyond. If there is a program you want to apply to, reach out and we will guide you.",
   },
 ];
 

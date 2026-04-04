@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
 import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
+import QuickContactForm from "@/components/QuickContactForm";
 
 export const metadata: Metadata = {
   title: "Get Admission Abroad — Founder-Led Study Abroad Consulting, Delhi",
@@ -55,7 +56,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="animate-fade-in-up delay-100 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Get Admitted to Top Universities Abroad —{" "}
+                Get Admitted to Top Universities Abroad,{" "}
                 <span className="text-gradient-gold">Led Personally by Prakash</span>
               </h1>
 
@@ -96,35 +97,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Prakash photo card */}
+            {/* Quick Contact Form */}
             <div className="animate-scale-in delay-300 flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="relative w-72 h-[420px] md:w-80 md:h-[460px] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-[#c9a84c]/30">
-                  <Image
-                    src="https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg"
-                    alt="Prakash — Founder, Get Admission Abroad"
-                    fill
-                    className="object-cover"
-                    priority
-                    unoptimized
-                  />
-                  {/* Overlay gradient at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#111c36]/80 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-white font-bold text-sm">Prakash</p>
-                    <p className="text-[#c9a84c] text-xs font-medium">Founder · Get Admission Abroad</p>
-                  </div>
-                </div>
-                {/* Floating badge */}
-                <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100">
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl">🏆</span>
-                    <div>
-                      <p className="text-xs font-bold text-[#1a2744]">100% Founder-Led</p>
-                      <p className="text-xs text-gray-500">No juniors, ever</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full max-w-md bg-white/10 border border-white/20 rounded-3xl p-8 backdrop-blur-sm">
+                <p className="text-[#c9a84c] text-xs font-bold uppercase tracking-widest mb-2">Quick Message</p>
+                <h2 className="text-white text-xl font-bold mb-1">Get in Touch</h2>
+                <p className="text-gray-400 text-sm mb-6">Send a message and Prakash will reach out personally.</p>
+                <QuickContactForm light />
               </div>
             </div>
           </div>
@@ -260,8 +239,8 @@ export default function HomePage() {
       {/* ── Students vs Parents ────────────────────────────────── */}
       <section className="py-20 bg-white">
         <Container>
-          <SectionTitle title="Who Do We Work With?" subtitle="Whether you're the student or the parent writing the cheque — we've got you covered." />
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <SectionTitle title="Who Do We Work With?" subtitle="Whether you're the student or the parent writing the cheque, we've got you covered." />
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Students */}
             <div className="group relative bg-[#1a2744] text-white rounded-3xl p-8 overflow-hidden card-hover">
               <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#c9a84c]/10 -translate-y-1/2 translate-x-1/2" />
@@ -322,6 +301,38 @@ export default function HomePage() {
                   className="mt-8 inline-flex items-center gap-2 px-6 py-2.5 bg-[#1a2744] text-white font-semibold rounded-xl hover:bg-[#243561] text-sm transition-colors"
                 >
                   Parents&apos; Guide →
+                </Link>
+              </div>
+            </div>
+
+            {/* Fastrack Application Processing */}
+            <div className="group relative bg-[#0e1829] text-white rounded-3xl p-8 overflow-hidden card-hover">
+              <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#c9a84c]/10 -translate-y-1/2 translate-x-1/2" />
+              <div className="relative z-10">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold mb-2">Fastrack Application Processing</h3>
+                <p className="text-gray-400 text-sm mb-6">Just want to get into the best schools? We handle everything.</p>
+                <ul className="space-y-3">
+                  {[
+                    "Skip the long profile-building phase",
+                    "Direct application to best-fit programs",
+                    "Full documentation handled by Prakash",
+                    "Fast turnaround without compromising quality",
+                    "Ideal if you already have a strong profile",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-gray-200">
+                      <span className="mt-0.5 w-4 h-4 rounded-full bg-[#c9a84c]/20 flex items-center justify-center flex-shrink-0">
+                        <span className="text-[#c9a84c] text-xs">✓</span>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className="mt-8 inline-flex items-center gap-2 px-6 py-2.5 bg-[#c9a84c] text-white font-semibold rounded-xl hover:bg-[#b8973b] text-sm transition-colors"
+                >
+                  Get Started →
                 </Link>
               </div>
             </div>
@@ -516,7 +527,11 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <p className="mt-6 text-center">
+          <p className="mt-6 text-center text-sm text-gray-500">
+            We also assist students applying to <strong>Ireland, Italy, Singapore, New Zealand, Germany, Netherlands</strong>, and other countries.
+            If you're targeting a destination not listed here, reach out and we'll guide you.
+          </p>
+          <p className="mt-4 text-center">
             <Link href="/countries" className="text-sm font-semibold text-[#1a2744] underline underline-offset-4 hover:text-[#c9a84c] transition-colors">
               Explore all destinations →
             </Link>
