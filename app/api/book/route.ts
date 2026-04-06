@@ -19,18 +19,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
-    // Check for existing booking at same date+slot
-    const existing = await prisma.booking.findFirst({
-      where: { date, slot },
-    });
-
-    if (existing) {
-      return NextResponse.json(
-        { error: "This time slot is already booked. Please choose another slot." },
-        { status: 409 }
-      );
-    }
-
     // Save booking
     const booking = await prisma.booking.create({
       data: { name, email, phone, message, date, slot },
