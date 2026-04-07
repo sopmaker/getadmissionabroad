@@ -162,7 +162,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="relative w-72 h-[400px] md:w-80 md:h-[440px] rounded-3xl overflow-hidden shadow-2xl ring-2 ring-[#c9a84c]/20">
                   <Image
-                    src="https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg"
+                    src="https://getadmissionabroad.in/wp-content/uploads/2026/04/prakash-sop-india.jpg"
                     alt="Prakash — Founder, Get Admission Abroad"
                     fill
                     className="object-cover"
