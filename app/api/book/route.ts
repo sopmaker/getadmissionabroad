@@ -2,6 +2,28 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { sendBookingEmails } from "@/lib/email";
 
+function isValidEmail(value: string) {
+  if (!value || value.length > 254 || value.includes(" ")) {
+    return false;
+  }
+
+  const parts = value.split("@");
+  if (parts.length !== 2) {
+    return false;
+  }
+
+  const [local, domain] = parts;
+  if (!local || !domain || local.length > 64) {
+    return false;
+  }
+
+  if (domain.startsWith(".") || domain.endsWith(".") || !domain.includes(".")) {
+    return false;
+  }
+
+  return true;
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -15,7 +37,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Phone must be 10 digits." }, { status: 400 });
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
