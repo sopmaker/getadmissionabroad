@@ -74,6 +74,12 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
+                <Link
+                  href="/book-paid"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#c9a84c] text-[#c9a84c] font-semibold rounded-xl hover:bg-[#c9a84c]/10 transition-colors text-sm"
+                >
+                  Book a Paid Call
+                </Link>
                 <a
                   href={WHATSAPP}
                   target="_blank"
@@ -728,6 +734,12 @@ export default function HomePage() {
                 className="px-8 py-4 btn-gold-shimmer text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-shadow text-base"
               >
                 Book a Free Call
+              </Link>
+              <Link
+                href="/book-paid"
+                className="px-8 py-4 border-2 border-[#c9a84c] text-[#c9a84c] font-semibold rounded-xl hover:bg-[#c9a84c]/10 transition-colors text-base"
+              >
+                Book a Paid Call
               </Link>
               <a
                 href={WHATSAPP}
